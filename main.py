@@ -12,6 +12,12 @@ def print_maze(maze):
         print(row_print)
 
 
+def solve_maze(maze):
+    if len(maze) < 1:
+        return None
+    if len(maze[0]) < 1:
+        return None
+    return solve_maze_helper(maze, [], 0, 0)
 
 
 def solve_maze_helper(maze, sol, pos_row, pos_col):
